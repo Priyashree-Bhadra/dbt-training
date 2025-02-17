@@ -12,6 +12,7 @@ select
     o.shipdate,
     o.ordercostprice,
     o.ordersellingprice,
+    {{markdown('ordersellingprice','ordercostprice')}} as markdown,
     o.ordersellingprice-o.ordercostprice as profit
 from {{ ref('raw_orders') }} as o 
 left join {{ ref('raw_customer') }} as c on o.customerid=c.customerid
