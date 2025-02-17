@@ -1,0 +1,14 @@
+sources:
+  - name: globalmart
+    database: raw
+    schema: globalmart
+    tables:
+      - name: orders
+        columns:
+          - name: orderid
+            tests:
+              - unique
+              - not_null
+                  
+      - name: customer 
+      - name: product
